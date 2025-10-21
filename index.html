@@ -16,14 +16,13 @@
 
   <style>
     :root {
-    --bg: #e9ebed;
-    --fg: #1f2328;
-    --muted: #6a737d;
-    --accent: #3b7fbf;
-    --card: #ffffff;
-    --shadow: 0 10px 40px rgba(0,0,0,.08);
-  }
-
+      --bg: #e9ebed;
+      --fg: #1f2328;
+      --muted: #6a737d;
+      --accent: #3b7fbf;
+      --card: #ffffff;
+      --shadow: 0 10px 40px rgba(0,0,0,.08);
+    }
     * { box-sizing: border-box; }
     body {
       margin: 0; padding: 24px;
@@ -37,12 +36,11 @@
       text-align: center;
     }
     h1 { margin: 16px 0 8px; font-size: 34px; font-weight: 600; letter-spacing: .2px; }
-    h2 { margin: 0 0 32px; font-size: 18px; font-weight: 400; color: var(--muted); line-height: 1.5; }
+    h2 { margin: 0 0 16px; font-size: 18px; font-weight: 400; color: var(--muted); line-height: 1.5; }
+    .about { margin: 0 0 24px; color: var(--fg); line-height: 1.55; }
     .portrait {
-      width: 150px; height: 150px;
-      border-radius: 50%; object-fit: cover;
-      box-shadow: 0 4px 20px rgba(0,0,0,.15);
-      margin-bottom: 10px;
+      width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
+      box-shadow: 0 4px 20px rgba(0,0,0,.15); margin-bottom: 10px;
     }
     .tagline { font-size: 15px; color: var(--muted); margin-bottom: 22px; line-height: 1.6; }
     .links { display: grid; gap: 14px; margin-top: 10px; }
@@ -57,17 +55,27 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     @media (prefers-color-scheme: dark){
-      :root{ --bg:#0e1116; --fg:#e6edf3; --muted:#9aa5b1; --accent:#3b7fbf; --card:#121721;}
+      :root{ --bg:#0e1116; --fg:#e6edf3; --muted:#9aa5b1; --accent:#3b7fbf; --card:#121721; }
     }
   </style>
 </head>
 <body>
   <main class="card">
-    <!-- Bewerbungsbild -->
-    <img src="bewerbungsbild.png" alt="Bewerbungsfoto von Jonas Ehrmann" class="portrait" onerror="this.style.display='none'">
+    <!-- Bewerbungsbild (achte auf korrekten Dateinamen/Klein-Großschreibung) -->
+    <img src="Bewerbungsbild.png" alt="Bewerbungsfoto von Jonas Ehrmann"
+         class="portrait" loading="eager" decoding="async"
+         width="150" height="150"
+         onerror="this.style.display='none'">
 
     <h1>Jonas Ehrmann, M.Sc.</h1>
     <h2>Lightweight Engineering · Additive Manufacturing<br>Simulation & Numerical Methods</h2>
+
+    <!-- Über mich (neu) -->
+    <p class="about">
+      Werkstoff- und Simulationsingenieur mit Schwerpunkt auf additiver Fertigung
+      und polymerbasierten Leichtbaustrukturen. Kombiniert FEM-Simulation, CAD-Konstruktion
+      und Prozess-Struktur-Analyse mit Praxiserfahrung in Forschung und industrieller Entwicklung.
+    </p>
 
     <p class="tagline">
       Portfolio &amp; Lebenslauf. Direktkontakt:
